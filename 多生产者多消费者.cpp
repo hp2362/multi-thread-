@@ -15,11 +15,11 @@ struct ItemRepository {
 	size_t write_position;
 	size_t produced_item_counter;
 	size_t consumed_item_counter;
-	std::mutex mtx;
+	std::mutex mtx;//
 	std::mutex produced_item_counter_mtx;
 	std::mutex consumed_item_counter_mtx;
-	std::condition_variable repo_not_full;
-	std::condition_variable repo_not_empty;
+	std::condition_variable repo_not_full;//
+	std::condition_variable repo_not_empty;//
 } gItemRepository;
 
 typedef struct ItemRepository ItemRepository;
